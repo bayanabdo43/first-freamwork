@@ -1,0 +1,115 @@
+<!-- <section class="container m-auto py-10 px-28">
+    <header class="text-center">
+        <h2 class="text-4xl font-bold">portfolio component</h2>
+        <div class="flex justify-center items-center my-3">
+            <div class="bg-black w-20 h-1 me-2"></div>
+            <i class="fa-solid fa-star"></i>
+            <div class="bg-black w-20 h-1 ms-2"></div>
+        </div>
+    </header>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div class="p-2 sm:px-0 ">
+            <img src="assets/img/poert1.png" alt="">
+        </div>
+        <div class="p-2 sm:px-0 ">
+            <img src="assets/img/port2 (1).png" alt="">
+        </div>
+        <div class="p-2 sm:px-0 ">
+            <img src="assets/img/port3 (1).png" alt="">
+        </div>
+        <div class="p-2 sm:px-0 ">
+            <img src="assets/img/poert1.png" alt="">
+        </div>
+        <div class="p-2 sm:px-0 ">
+            <img src="assets/img/port2 (1).png" alt="">
+        </div>
+        <div class="p-2 sm:px-0 ">
+            <img src="../../../assets/img/port3 (1).png" alt="">
+        </div>
+    </div>
+</section> -->
+
+<section class="main-portfolio my-5 px-28">
+    <header class="text-center">
+        <h2 class="text-4xl font-bold">portfolio component</h2>
+        <div class="flex justify-center items-center my-3">
+            <div class="bg-black w-20 h-1 me-2"></div>
+            <i class="fa-solid fa-star"></i>
+            <div class="bg-black w-20 h-1 ms-2"></div>
+        </div>
+    </header>
+
+    <div class=" my-4">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="p-2">
+                <div class="card" (click)="showCard(0)">
+                    <div class="card-img">
+                        <img src="../../../assets/img/poert1.png" class="w-100" alt="" />
+                        <div class="overlay">
+                            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2">
+                <div class="card" (click)="showCard(1)">
+                    <div class="card-img">
+                        <img src="../../../assets/img/port2 (1).png" class="w-100" alt="" />
+                        <div class="overlay">
+                            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="card" (click)="showCard(2)">
+                    <div class="card-img">
+                        <img src="../../../assets/img/port3 (1).png" class="w-100" alt="" />
+                        <div class="overlay">
+                            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="card" (click)="showCard(0)">
+                    <div class="card-img">
+                        <img src="../../../assets/img/poert1.png" class="w-100" alt="" />
+                        <div class="overlay">
+                            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2">
+                <div class="card" (click)="showCard(1)">
+                    <div class="card-img">
+                        <img src="../../../assets/img/port2 (1).png" class="w-100" alt="" />
+                        <div class="overlay">
+                            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="card" (click)="showCard(2)">
+                    <div class="card-img">
+                        <img src="../../../assets/img/port3 (1).png" class="w-100" alt="" />
+                        <div class="overlay">
+                            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="full-screen-overlay" [style.display]="isOverlayVisible ? 'flex' : 'none'" (click)="hideCard()">
+        <div class="active-card-content">
+            <img [src]="activeImageSrc" alt="Active Image" />
+        </div>
+    </div>
+</section>
